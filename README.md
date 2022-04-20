@@ -40,7 +40,7 @@ The dataset is created by web scraping three seasons worth of historical data as
 	+ XGBoost
 	+ Neural Network
 - Selected Logistic Regression model 
-	+ Accuracy: 54%
+	+ Accuracy: 57.8%
 	+ Log Loss: 0.6684
 
 #### Orchestration and Display
