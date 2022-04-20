@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if not games_today %}
+<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+  <div class="card-header">Alert</div>
+  <div class="card-body">
+    <h5 class="card-title">No Games Today</h5>
+    <p class="card-text">There are no regular season NHL games today.</p>
+  </div>
+
+{%endif%}
+<h2>Today's Predictions</h1>
+<p>Each game is listed with the predicted winner highlighted in green and their probability of victory according to our model. Good luck!</p>
+<div class="boxes">
+	{% for g in games %}
+	<div class="game">
+		<div class="team-info">
+			<img src="/static/logos/{{g.home_team}}.png" class="card-img-top" alt="{{g.home_team}}">
+			{% if g.home_win %}
+			<p class="green">{{g.home_team}}<br>{{g.home_prob}}</p>
+			{% else %}
+			<p class="home_team">{{g.home_team}}<br>{{g.home_prob}}</p>
+			{% endif %}
+		</div>
+		<div class="game-info">
+			<p class="matchup">VS</p>
+		</div>
+		<div class="team-info">
+			<img src="/static/logos/{{g.away_team}}.png" class="card-img-top" alt="{{g.away_team}}">
+			{% if not g.home_win %}
+			<p class="green">{{g.away_team}}<br>{{g.away_prob}}</p>
+			{% else %}
+			<p class="away_team">{{g.away_team}}<br>{{g.away_prob}}</p>
+			{% endif %}
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+{% endblock %}

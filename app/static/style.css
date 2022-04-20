@@ -1,0 +1,72 @@
+body{
+	font-family: 'Source_Sans_Pro';
+}
+
+.navbar{
+	font-family: 'Source_Sans_Pro';
+}
+
+.navbar img{
+    height: 60px;
+}
+
+h2{
+	padding-top: 20px;
+}
+
+footer{
+	text-align: center;
+	padding: 1.5em;
+	margin-top: 3.5em;
+	background-color: #dbdbdb ;
+}
+
+footer p{
+	padding: 20px;
+}
+
+.boxes {
+	padding-top: 50px;
+    display: grid;
+    font-weight: 400;
+    grid-gap: 50px;
+    grid-template-rows: repeat(auto-fill, 150px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.game {
+    border-style: solid;
+    border-color: #262626;
+    border-width: 5px;
+}
+
+.team-info{
+	padding: 20px;
+}
+
+.game img{
+	height: 60px;
+	width: 60px;
+}
+
+.game .team-info {
+    width: 38%;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.game .game-info{
+	display: inline-block;
+    width: 20%;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.green{
+	color: green;
+}
